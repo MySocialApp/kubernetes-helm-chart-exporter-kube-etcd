@@ -1,6 +1,6 @@
 {{ define "etcd3.rules.yaml.tpl" }}
 groups:
-- name: ./etcd3.rules
+- name: etcd3.rules
   rules:
   - alert: InsufficientMembers
     expr: count(up{job="etcd"} == 0) > (count(up{job="etcd"}) / 2 - 1)
